@@ -3,16 +3,21 @@ using namespace std;
 
 int main()
 {
-	int count, i, arr[30], num, first, last, middle;
-	cout<<"how many elements would you like to enter?:"; 
+	int count, i, num, first, last, middle;
+	long int arr[1000];
+	cout<<"number of elements"; 
         cin>>count;
 
 	for (i=0; i<count; i++)
 	{
-		cout<<"Enter number "<<(i+1)<<": "; 
-                cin>>arr[i];
+		arr[i]=rand()%100;
 	}
-	cout<<"Enter the number that you want to search:"; 
+	cout<<"The array is: "<<endl;
+	for (i=0; i<count; i++)
+	{
+		cout<<arr[i]<<" ";
+	}
+	cout<<"Enter the number to search:"; 
         cin>>num;
 	first = 0;
 	last = count-1;
@@ -26,7 +31,7 @@ int main()
 	   }
 	   else if(arr[middle] == num)
 	   {
-		cout<<num<<" found in the array at the location "<<middle+1<<"\n"; 
+		cout<<num<<" found";
                 break; 
            } 
            else { 
@@ -36,7 +41,7 @@ int main()
         } 
         if(first > last)
 	{
-	   cout<<num<<" not found in the array";
+	   cout<<num<<" not found";
 	}
 	return 0;
 }
