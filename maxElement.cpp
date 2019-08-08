@@ -1,23 +1,27 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
+
 int main()
+
 {
-	int num,i,max=0;
-	cout<<"enter array size";
-	cin>>num;
-	int a[num];
-	for(i=0;i<num;i++)
-	{
-		cout<<"enter array elements";
-		cin>>a[i];
-	}
-	for(i=0;i<num;i++)
-	{
-		if(a[i]>>max)
-		{
-			max=a[i];
-		}
-	}
-	cout<<"largest is"<<max;
+
+    const int arraySize = 100;
+
+    int myArray[arraySize];
+    int max = 0;
+ 
+    for(int i = 0; i < arraySize; ++i)
+    {
+        myArray[i] = rand();
+ 
+        cout << myArray[i] << endl;
+        max = myArray[0];
+        if(myArray[i] > max)
+			max = myArray[i];
+    }
+	cout << "\nHigh: " << max << "\n\n";
 	return 0;
 }
