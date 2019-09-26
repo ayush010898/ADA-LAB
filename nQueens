@@ -28,16 +28,17 @@ bool solveNQueen(int board[N][N], int col) {
    return false;
 }
 bool checkSolution() {
+   int i,j;
    int board[N][N];
-   for(int i = 0; i<N; i++)
-   for(int j = 0; j<N; j++)
-   board[i][j] = 0;
+   for(i = 0; i<N; i++)
+	for(j = 0; j<N; j++)
+		board[i][j] = 0;
    if ( solveNQueen(board, 0) == false ) {
-      cout << "Solution does not exist";
+      cout << "No solution";
       return false;
    }
-   for (int i = 0; i < N; i++) {
-      for (int j = 0; j < N; j++)
+   for (i = 0; i < N; i++) {
+      for (j = 0; j < N; j++)
          cout << board[i][j] << " ";
          cout << endl;
         }
@@ -45,4 +46,6 @@ bool checkSolution() {
 }
 int main() {
    checkSolution();
+   return 0;
 }
+
